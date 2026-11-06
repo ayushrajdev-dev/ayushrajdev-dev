@@ -5,7 +5,6 @@
 <p align="center">
   <a href="https://a2cloud.qzz.io"><img src="https://img.shields.io/badge/A2_Cloud-00F0FF?style=for-the-badge&logo=cloudflare&logoColor=black&labelColor=0a0a0f" alt="A2 Cloud" /></a>
   <a href="https://ayush6909.dev"><img src="https://img.shields.io/badge/ayush6909.dev-FF0055?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0a0f" alt="Personal Domain" /></a>
-  <a href="https://ayushanzarai.vercel.app"><img src="https://img.shields.io/badge/Ayushanzarai-00FF66?style=for-the-badge&logo=vercel&logoColor=black&labelColor=0a0a0f" alt="Ayushanzarai" /></a>
   <a href="mailto:ayushrajdev9@gmail.com"><img src="https://img.shields.io/badge/Comm_Uplink-7928CA?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0a0f" alt="Email" /></a>
 </p>
 
@@ -16,105 +15,53 @@
 ║  OPERATOR     : Ayush Rajdev [A2]                      LOCATION : India (UTC+05:30)   ║
 ║  CLASS        : Systems Architect · Cybersecurity · Calisthenics Athlete             ║
 ║  CORE ENGINE  : Low-Level C · Bare-Metal ESP32 AI · Rust Systems Tooling              ║
-║  FLAGSHIP     : a2llm (Custom Transformer in C) · A2 Cloud Platform                   ║
+║  FLAGSHIP     : a2llm (Transformer in C) · leakgate · prompt-compress                 ║
 ║  PHILOSOPHY   : Squeeze every clock cycle. Zero bloat. Pure unfiltered performance.  ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-### ⚡ Neural & Systems Arsenal
-
-```ansi
-[1;36m[CORE LANGUAGES][0m   C (Bare Metal) · Rust · TypeScript · Python · C++ · Go · x86/ARM Assembly
-[1;35m[AI & INFERENCE][0m   Custom Decoder Transformers · ESP32 Edge ML · Token Compression · Quantization
-[1;32m[SECURITY & OPS][0m   Reverse Engineering · Network Protocol Crafting · POSIX · Docker · Linux Kernel
-[1;33m[INFRASTRUCTURE][0m   Next.js 15 · Three.js · vLLM · High-Throughput Gateway Routing · Framer Motion
-```
-
----
-
-### 🛸 Featured Cyber Deployments
+### 🛸 Shipped and installable
 
 <table>
   <tr>
-    <th width="35%">Project Matrix</th>
-    <th width="50%">Telemetry & Mission Brief</th>
-    <th width="15%">Core Tech</th>
+    <th width="22%">Project</th>
+    <th width="52%">What it does</th>
+    <th width="26%">Install</th>
   </tr>
   <tr>
-    <td>
-      <a href="https://github.com/ayushrajdev-dev/a2llm">
-        <b>🧠 a2llm</b>
-      </a>
-      <br><sub>Bare-Metal Neural Core</sub>
-    </td>
-    <td>
-      From-scratch decoder-only Transformer architecture with a custom inference engine engineered specifically for <b>ESP32 microcontrollers</b>. Zero external ML bloat.
-    </td>
-    <td><code>C</code> <code>ESP32</code> <code>Embed</code></td>
+    <td><a href="https://github.com/ayushrajdev-dev/a2llm"><b>🧠 a2llm</b></a><br><sub>GPT on a microcontroller</sub></td>
+    <td>Decoder-only transformer written from scratch. 34,432 parameters, 33.6 KB of int8 weights, 257 lines of dependency-free C. Runs on ESP32, ESP32-S3, ESP32-C3. Host harness builds with one <code>gcc</code> command.</td>
+    <td><code>cd esp32/host_test && gcc -O2 -I../main ../main/a2lm.c main.c -lm -o host_a2lm</code></td>
   </tr>
   <tr>
-    <td>
-      <a href="https://a2cloud.qzz.io">
-        <b>☁️ A2 Cloud</b>
-      </a>
-      <br><sub>Production Ecosystem</sub>
-    </td>
-    <td>
-      Custom distributed cloud gateway platform powered by Next.js 15, React 19, and hardware-accelerated Framer Motion visuals.
-    </td>
-    <td><code>Next.js 15</code> <code>React 19</code></td>
+    <td><a href="https://github.com/ayushrajdev-dev/leakgate"><b>🛡️ leakgate</b></a><br><sub>Secret scanner</sub></td>
+    <td>20 rules plus entropy checks. 393 KB binary, 21,146 files in 34 s, 2 findings both real test fixtures. Pre-commit hook, GitHub Action, JSON output, <code>.leakgateignore</code>.</td>
+    <td><code>curl -fsSL https://raw.githubusercontent.com/ayushrajdev-dev/leakgate/main/install.sh | sh && leakgate install</code></td>
   </tr>
   <tr>
-    <td>
-      <a href="https://github.com/ayushrajdev-dev/nano-router">
-        <b>⚡ NanoRouter</b>
-      </a>
-      <br><sub>High-Velocity Gateway</sub>
-    </td>
-    <td>
-      Zero-dependency, multi-provider LLM edge router featuring automated sub-millisecond failover, semantic cost optimization, and real-time token telemetry.
-    </td>
-    <td><code>TypeScript</code> <code>Node.js</code></td>
+    <td><a href="https://github.com/ayushrajdev-dev/prompt-compress"><b>🗜️ prompt-compress</b></a><br><sub>Token squeezer</sub></td>
+    <td>Four deterministic passes: normalize, dedupe, 70 phrase rules, sentence prune. Verified 31–50% token savings. Code fences, numbers, URLs, and identifiers are never removed. Zero dependencies.</td>
+    <td><code>curl -fsSL https://raw.githubusercontent.com/ayushrajdev-dev/prompt-compress/main/install.sh | sh</code></td>
   </tr>
   <tr>
-    <td>
-      <a href="https://github.com/ayushrajdev-dev/prompt-compress">
-        <b>🗜️ prompt-compress</b>
-      </a>
-      <br><sub>Semantic Token Squeezer</sub>
-    </td>
-    <td>
-      Blazing-fast prompt compression engine in Rust that slashes LLM context token consumption by <b>30–50%</b> without degrading model reasoning ability.
-    </td>
-    <td><code>Rust</code> <code>CLI</code> <code>Tokens</code></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/ayushrajdev-dev/repo2prompt">
-        <b>📦 repo2prompt</b>
-      </a>
-      <br><sub>Context Synthesizer</sub>
-    </td>
-    <td>
-      High-speed codebase-to-context packer for LLMs equipped with security scanning, token density estimation, and AST ignore trees.
-    </td>
-    <td><code>TypeScript</code> <code>AST</code> <code>CLI</code></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://ayushanzarai.vercel.app">
-        <b>🌐 Ayushanzarai</b>
-      </a>
-      <br><sub>Unfiltered 3D Interface</sub>
-    </td>
-    <td>
-      Uncensored multi-model AI orchestration web client rendered with interactive real-time Three.js particle dynamics.
-    </td>
-    <td><code>Three.js</code> <code>WebGL</code> <code>AI</code></td>
+    <td><a href="https://github.com/ayushrajdev-dev/mcp-server-template"><b>🔌 mcp-server-template</b></a><br><sub>MCP server, production</sub></td>
+    <td>Typed tools with zod, resources, prompts, stderr-only logging, graceful shutdown, Docker, and a live stdio integration test. Node 20, 22, 24 in CI.</td>
+    <td><code>npx mcp-server-template</code></td>
   </tr>
 </table>
+
+---
+
+### ⚡ Neural & Systems Arsenal
+
+```ansi
+[1;36m[CORE LANGUAGES][0m   C (Bare Metal) · Rust · TypeScript · Python · C++ · Go · x86/ARM Assembly
+[1;35m[AI & INFERENCE][0m   Custom Decoder Transformers · ESP32 Edge ML · Token Compression · int8 Quantization
+[1;32m[SECURITY & OPS][0m   Reverse Engineering · Network Protocol Crafting · POSIX · Docker · Linux Kernel
+[1;33m[INFRASTRUCTURE][0m   Next.js 15 · Three.js · vLLM · High-Throughput Gateway Routing · Framer Motion
+```
 
 ---
 
